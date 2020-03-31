@@ -1,10 +1,26 @@
-body {
+html {
+	height: 100%;
+}
+
+.page-wrapper {
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+	margin: 0;
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 13px;
 	line-height: 13px;
 }
 
+.page-header {
+	display: flex;
+	justify-content: center;
+	min-width: 315px;
+	margin: 0 25px;
+}
+
 .to-do-start-page {
+	display: none;
 	color: #000;
 	text-decoration: none;
 	cursor: pointer;
@@ -21,13 +37,16 @@ body {
 }
 
 .category__list {
-	margin-top: 0;
-	margin-bottom: 0;
+	display: flex;
+	min-width: 315px;
+	margin: 0;
 	padding-left: 0;
 	list-style: none;
 }
 
 .category__link {
+	display: block;
+	padding: 20px 10px;
 	font-family: 'Helvetica Neue', Arial, sans-serif;
 	font-size: 14px;
 	font-weight: 700;
@@ -42,13 +61,22 @@ body {
 }
 
 .user__list {
+	display: none;
+	flex-wrap: wrap;
 	margin-top: 0;
 	margin-bottom: 0;
+	margin-left: auto;
 	padding-left: 0;
 	list-style: none;
 }
 
+.user__item--name::first-letter {
+	color: #CC0000;
+}
+
 .user__link {
+	margin-top: 0;
+	margin-left: 25px;
 	color: #000;
 	text-decoration: none;
 	cursor: pointer;
@@ -63,13 +91,55 @@ body {
 	outline: 1px solid #FFCC00;
 }
 
+.page-main {
+	display: flex;
+	flex-grow: 1;
+	flex-shrink: 0;
+	flex-basis: auto;
+}
+
+.search__form {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	margin: auto 20px;
+}
+
+.search__input {
+	width: 100%;
+	max-width: 530px;
+	border: 3px solid #FFCC00;
+}
+
 .search__button {
+	width: 100px;
+	padding: 0;
+	text-align: center;
 	font-family: Arial, sans-serif;
 	font-size: 13px;
+	background-color: #FFCC00;
+	border: 3px solid #FFCC00;
 	cursor: pointer;
 }
 
+.page-footer {
+	display: flex;
+	flex-direction: column;
+	flex-grow: 0;
+	flex-shrink: 0;
+	flex-basis: auto;
+	align-items: center;
+}
+
+.user-info {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 20px 0;
+}
+
 .user-info__mails {
+	margin-bottom: 5px;
 	font-family: 'Helvetica Neue',Arial,sans-serif;
 	font-size: 16px;
 	line-height: 16px;
@@ -86,13 +156,40 @@ body {
 	display: block;
 	width: 59px;
 	height: 23px;
+	margin-top: 20px;
+	margin-bottom: 25px;
 	background-image: url(../img/logo-mobile.svg);
 	background-repeat: no-repeat;
 	opacity:0.2;
 	font-size: 0;
 }
 
-@media (min-width: 400px) {
+@media (min-width: 700px) {
+
+	.page-header {
+		margin-top: 20px;
+		margin-bottom: 20px;
+	}
+
+	.to-do-start-page {
+		display: block;
+	}
+
+	.category__list {
+		display: none;
+	}
+
+	.user__list {
+		display: flex;
+	}
+
+	.search__input {
+		max-width: 660px;
+	}
+
+	.user-info {
+		display: none;
+	}
 
 	.page-footer__logo {
 		width: 60px;
