@@ -1,0 +1,79 @@
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	line-height: 13px;
+}
+
+.to-do-start-page {
+	color: #000;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.to-do-start-page:hover,
+.to-do-start-page:active
+ {
+	color: #CC0000;
+}
+
+.to-do-start-page:focus {
+	outline: 1px solid #FFCC00;
+}
+
+.category__list {
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-left: 0;
+	list-style: none;
+}
+
+.category__link {
+	font-family: 'Helvetica Neue', Arial, sans-serif;
+	font-size: 14px;
+	font-weight: 700;
+	color: #CCC;
+	text-transform: uppercase;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.user__list {
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-left: 0;
+	list-style: none;
+}
+
+.user__link {
+	color: #000;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.user__link:hover,
+.user__link:active {
+	color: #CC0000;
+}
+
+.user__link:focus {
+	outline: 1px solid #FFCC00;
+}
+
+.search__button {
+	font-family: Arial, sans-serif;
+	font-size: 13px;
+	cursor: pointer;
+}
+
+.user-info__mails {
+	font-family: 'Helvetica Neue',Arial,sans-serif;
+	font-size: 16px;
+	line-height: 16px;
+	cursor: pointer;
+}
+
+.user-info__user {
+	font-family: 'Helvetica Neue',Arial,sans-serif;
+	color: #BFBFBF;
+	cursor: pointer;
+}
