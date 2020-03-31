@@ -37,6 +37,10 @@ body {
 	cursor: pointer;
 }
 
+.category__link:focus {
+	outline: 1px solid #FFCC00;
+}
+
 .user__list {
 	margin-top: 0;
 	margin-bottom: 0;
@@ -76,4 +80,29 @@ body {
 	font-family: 'Helvetica Neue',Arial,sans-serif;
 	color: #BFBFBF;
 	cursor: pointer;
+}
+
+.page-footer__logo {
+	display: block;
+	width: 59px;
+	height: 23px;
+	background-image: url(../img/logo-mobile.svg);
+	background-repeat: no-repeat;
+	opacity:0.2;
+	font-size: 0;
+}
+
+@media (min-width: 400px) {
+
+	.page-footer__logo {
+		width: 60px;
+		height: 27px;
+		background-image: url(../img/logo.svg);
+		background-position: 0 0;
+		opacity:1;
+	}
+
+	.page-footer__logo:hover {
+		background-position: 0 -30px;
+	}
 }
