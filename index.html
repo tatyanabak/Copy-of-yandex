@@ -8,46 +8,55 @@
 	</head>
 	<body class="page-wrapper">
 		<header class="page-header">
-			<a href="#" class="to-do-start-page">Сделать стартовой</a>
-			<ul class="category__list">
-				<li class="category__item">
-					<a class="category__link" href="https://yandex.ru/portal/video">Видео</a>
-				</li>
-				<li class="category__item">
-					<a class="category__link" href="https://yandex.ru/images/">Картинки</a>
-				</li>
-				<li class="category__item">
-					<a class="category__link" href="https://market.yandex.ru/">Маркет</a>
-				</li>
-				<li class="category__item">
-					<a class="category__link" href="https://yandex.ru/maps/">Карты</a>
-				</li>
-			</ul>
-			<ul class="user__list">
-				<li class="user__item user__item--name">
-					<a class="user__link" href="https://passport.yandex.ru/passport?mode=passport">t.p.bak</a>
-				</li>
-				<li class="user__item user__item--mails">
-					<a class="user__link" href="https://mail.yandex.ru">
-						<span>Почта</span>
-						<span>16</span>
-					</a>
-				</li>
-				<li class="user__item">
-					<a class="user__link" href="https://passport.yandex.ru/passport?mode=logout">Выход</a>
-				</li>
-			</ul>
+			<a href="#" class="to-do-start-page link">Сделать стартовой</a>
+			<nav class="category">
+				<ul class="category__list list">
+					<li><a class="category__link link" href="https://yandex.ru/portal/video">Видео</a></li>
+					<li><a class="category__link link" href="https://yandex.ru/images/">Картинки</a></li>
+					<li><a class="category__link link" href="https://market.yandex.ru/">Маркет</a></li>
+					<li><a class="category__link link" href="https://yandex.ru/maps/">Карты</a></li>
+				</ul>
+			</nav>
+			<nav class="personal">
+				<ul class="personal__list list">
+					<li class="personal__name">
+						<a class="personal__link link" href="https://passport.yandex.ru/passport?mode=passport">t.p.bak</a>
+					</li>
+					<li class="personal__mails">
+						<a class="personal__link link" href="https://mail.yandex.ru">
+							<span>Почта</span>
+							<span>18</span>
+						</a>
+					</li>
+					<li class="personal__logout">
+						<a class="personal__link link" href="https://passport.yandex.ru/passport?mode=logout">Выход</a>
+					</li>
+				</ul>
+			</nav>
 		</header>
 		<main class="page-main">
-			<form class="search__form" action="https://yandex.ru/search/" method="get">
-				<input class="search__input" type="text">
-				<button class="search__button" type="button">Найти</button>
-			</form>
+			<div class="search">
+				<form class="search__form" action="https://yandex.ru/search/" method="get">
+					<input class="search__input" type="text">
+					<button class="search__voice" type="button">Голосовой поиск</button>
+					<button class="search__button" type="button">Найти</button>
+				</form>
+			</div>
+			<div class="suggest">
+				<ul class="suggest__list list">
+					<li><a class="suggest__link link" href="https://yandex.ru/search/?text=адажио">адажио</a></li>
+					<li><a class="suggest__link link" href="https://yandex.ru/search/?text=адаптационный">адаптационный</a></li>
+					<li><a class="suggest__link link" href="https://yandex.ru/search/?text=адаптер">адаптер</a></li>
+					<li><a class="suggest__link link" href="https://yandex.ru/search/?text=адаптивность">адаптивность</a></li>
+					<li><a class="suggest__link link" href="https://yandex.ru/search/?text=адвент">адвент</a></li>
+					<li><a class="suggest__link link" href="https://yandex.ru/search/?text=адвербиализированный">адвербиализированный</a></li>
+				</ul>
+			</div>
 		</main>
 		<footer class="page-footer">
-			<div class="page-footer__user-info user-info">
-				<span class="user-info__mails">16 непрочитанных</span>
-				<span class="user-info__user">t.p.bak</span>
+			<div class="personal-inner">
+				<a class="personal-inner__mails link" href="https://mail.yandex.ru/">18 непрочитанных</a>
+				<a class="personal-inner__user link" href="https://passport.yandex.ru/passport?mode=passport">t.p.bak</a>
 			</div>
 			<a href="https://yandex.ru/" class="page-footer__logo">Яндекс</a>
 		</footer>
