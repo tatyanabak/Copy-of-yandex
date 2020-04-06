@@ -89,24 +89,21 @@ html {
   flex-shrink: 0;
   flex-basis: auto;
   flex-direction: column;
-  padding-top: 40vh;
-}
-
-.wrapper {
-  margin-right: 40px;
-  margin-left: 20px;
 }
 
 .search {
   display: flex;
   justify-content: center;
+  margin: auto 20px 0;
 }
 
 .search__form {
   display: flex;
+  box-sizing: border-box;
   width: 100%;
   max-width: 465px;
   height: 50px;
+  padding-right: 17px;
 }
 
 .search__input {
@@ -146,7 +143,6 @@ html {
 }
 
 .search__button:focus,
-.search__button:hover,
 .search__button:active {
   width: 100px;
 
@@ -200,7 +196,15 @@ html {
   display: none;
 }
 
+.wrapper {
+  position: relative;
+
+  margin: 0 20px auto;
+}
+
 .suggest {
+  position: absolute;
+
   display: none;
   justify-content: center;
   width: 100%;
@@ -209,7 +213,7 @@ html {
   box-shadow: 0 10px 13px 0 #e1e1e1;
 }
 
-.search:focus-within + .suggest {
+.search:focus-within ~ .wrapper > .suggest {
   display: flex;
 }
 
@@ -322,18 +326,6 @@ html {
     outline: 1px solid #ffcc00;
   }
 
-  .page-main {
-    padding-top: 43vh;
-  }
-
-  .wrapper {
-    display: flex;
-    width: 100%;
-    margin-right: 0;
-    margin-left: 0;
-    justify-content: center;
-  }
-
   .search__form {
     width: 80%;
     max-width: 700px;
@@ -346,26 +338,41 @@ html {
   }
 
   .search__voice {
+    position: relative;
+
     width: 40px;
 
     background-color: white;
-    background-image: url("../img/voice-ligthgrey.svg");
+    border-top: 3px solid #ffdb4d;
+    border-bottom: 3px solid #ffdb4d;
+    outline: none;
+  }
+
+  .search__voice::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: block;
+    width: 40px;
+    height: calc(40px - 6px);
+
+    background-image: url("../img/voice.svg");
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: 24px 24px;
-    border-top: 3px solid #ffdb4d;
-    border-bottom: 3px solid #ffdb4d;
+    opacity: 0.17;
+    transition-duration: 0.5s;
   }
 
-  .search__voice:hover,
-  .search__voice:focus {
-    background-image: url("../img/voice-grey.svg");
-    outline: none;
+  .search__voice:hover::after,
+  .search__voice:focus::after {
+    opacity: 0.3;
   }
 
-  .search__voice:active {
-    background-image: url("../img/voice.svg");
-    outline: none;
+  .search__voice:active::after {
+    opacity: 1;
   }
 
   .search__button {
@@ -391,6 +398,7 @@ html {
 
   .suggest {
     display: none;
+
     box-shadow: none;
   }
 
@@ -401,7 +409,7 @@ html {
     max-width: 700px;
     margin-top: 0;
     margin-left: 0;
-    padding-right: 80px;
+    padding-right: 100px;
   }
 
   .suggest__link {
