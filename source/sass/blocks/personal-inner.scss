@@ -1,0 +1,24 @@
+.personal-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 0;
+
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
+}
+
+.personal-inner__mails {
+  margin-bottom: 5px;
+
+  font-size: 14px;
+  line-height: 16px;
+  font-family: "Helvetica Neue",Arial,sans-serif;
+  color: #000;
+}
+
+.personal-inner__user {
+  font-family: "Helvetica Neue",Arial,sans-serif;
+  color: #bfbfbf;
+}

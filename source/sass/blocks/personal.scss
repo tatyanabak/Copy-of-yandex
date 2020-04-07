@@ -1,0 +1,33 @@
+.personal {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+    margin-left: auto;
+  }
+}
+
+.personal__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -20px;
+}
+
+.personal__name::first-letter {
+  color: #cc0000;
+}
+
+.personal__link {
+  margin-left: 20px;
+
+  color: #000;
+}
+
+.personal__link:hover,
+.personal__link:active {
+  color: #cc0000;
+}
+
+.personal__link:focus {
+  outline: 1px solid #ffcc00;
+}

@@ -1,0 +1,31 @@
+.category {
+  margin-right: auto;
+  margin-left: auto;
+
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
+}
+
+.category__list {
+  display: flex;
+  margin-left: -10px;
+}
+
+.category__link {
+  display: block;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 10px;
+  padding: 10px 0;
+
+  font-weight: 700;
+  font-size: 14px;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  color: #cccccc;
+  text-transform: uppercase;
+}
+
+.category__link:focus {
+  outline: 1px solid #ffcc00;
+}

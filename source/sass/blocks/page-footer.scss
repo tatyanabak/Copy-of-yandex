@@ -1,0 +1,39 @@
+.page-footer {
+  display: flex;
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: auto;
+  flex-direction: column;
+  align-items: center;
+}
+
+.page-footer__logo {
+  display: block;
+  width: 59px;
+  height: 23px;
+  margin-top: 5px;
+  margin-bottom: 25px;
+
+  font-size: 0;
+
+  background-image: url(../img/logo-mobile.svg);
+  background-repeat: no-repeat;
+  opacity: 0.2;
+
+  @media (min-width: $desktop-width) {
+    width: 60px;
+    height: 27px;
+    margin-top: 50px;
+    margin-bottom: 10px;
+
+    background-image: url(../img/logo.svg);
+    background-position: 0 0;
+    opacity: 1;
+  }
+}
+
+.page-footer__logo:hover {
+  @media (min-width: $desktop-width) {
+    background-position: 0 -30px;
+  }
+}

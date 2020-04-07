@@ -1,0 +1,11 @@
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-width: 50px;
+  min-height: 100%;
+  margin: 0;
+
+  font-size: 13px;
+  line-height: 13px;
+  font-family: Arial, Helvetica, sans-serif;
+}

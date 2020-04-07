@@ -1,0 +1,20 @@
+.to-do-start-page {
+  display: none;
+
+  color: #000;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+  }
+}
+
+.to-do-start-page:hover,
+.to-do-start-page:active {
+  color: #cc0000;
+
+  outline: none;
+}
+
+.to-do-start-page:focus {
+  outline: 1px solid #ffcc00;
+}
