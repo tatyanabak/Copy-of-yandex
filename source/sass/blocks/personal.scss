@@ -11,23 +11,27 @@
   display: flex;
   flex-wrap: wrap;
   margin-left: -20px;
+
+  @include list;
 }
 
 .personal__name::first-letter {
-  color: #cc0000;
+  color: $color-link-hover;
 }
 
 .personal__link {
   margin-left: 20px;
 
-  color: #000;
-}
+  color: $color-basic;
 
-.personal__link:hover,
-.personal__link:active {
-  color: #cc0000;
-}
+  @include link;
 
-.personal__link:focus {
-  outline: 1px solid #ffcc00;
+  &:hover,
+  &:active {
+    color: $color-link-hover;
+  }
+
+  &:focus {
+    outline: 1px solid $color-accent;
+  }
 }

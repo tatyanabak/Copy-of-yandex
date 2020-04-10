@@ -1,20 +1,26 @@
 .to-do-start-page {
   display: none;
 
-  color: #000;
+  color: $color-basic;
+
+  @include link;
 
   @media (min-width: $desktop-width) {
     display: block;
   }
-}
 
-.to-do-start-page:hover,
-.to-do-start-page:active {
-  color: #cc0000;
+  &:hover,
+  &:active {
+    @media (min-width: $desktop-width) {
+      color: $color-link-hover;
 
-  outline: none;
-}
+      outline: none;
+    }
+  }
 
-.to-do-start-page:focus {
-  outline: 1px solid #ffcc00;
+  &:focus {
+    @media (min-width: $desktop-width) {
+      outline: 1px solid $color-accent;
+    }
+  }
 }

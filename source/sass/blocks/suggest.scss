@@ -27,6 +27,8 @@
   margin-top: -10px;
   margin-left: -7px;
 
+  @include list;
+
   @media (min-width: $desktop-width) {
     display: block;
     box-sizing: border-box;
@@ -45,10 +47,12 @@
   padding: 7px 7px;
 
   font-size: 14px;
-  color: #000;
+  color: $color-basic;
 
   background-color: #f2f2f2;
   border-radius: 5px;
+
+  @include link;
 
   @media (min-width: $desktop-width) {
     box-sizing: border-box;
@@ -62,10 +66,10 @@
 
     background-color: white;
   }
-}
 
-.suggest__link:hover {
-  @media (min-width: $desktop-width) {
-    background-color: #ffeba0;
+  &:hover {
+    @media (min-width: $desktop-width) {
+      background-color: $color-accent-soft;
+    }
   }
 }
