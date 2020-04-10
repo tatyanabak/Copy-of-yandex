@@ -1,0 +1,33 @@
+.category {
+  margin-right: auto;
+  margin-left: auto;
+
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
+}
+
+.category__list {
+  display: flex;
+  margin-left: -10px;
+
+  @include list;
+}
+
+.category__link {
+  display: block;
+  margin: 5px 0 5px 10px;
+  padding: 10px 0;
+
+  font-weight: 700;
+  font-size: 14px;
+  font-family: $font-additional;
+  color: #cccccc;
+  text-transform: uppercase;
+
+  @include link;
+
+  &:focus {
+    outline: 1px solid $color-accent;
+  }
+}

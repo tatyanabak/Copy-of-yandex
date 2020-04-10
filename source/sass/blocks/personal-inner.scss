@@ -1,0 +1,28 @@
+.personal-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 0;
+
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
+}
+
+.personal-inner__mails {
+  margin-bottom: 5px;
+
+  font-size: 14px;
+  line-height: 16px;
+  font-family: $font-additional;
+  color: $color-basic;
+
+  @include link;
+}
+
+.personal-inner__user {
+  font-family: $font-additional;
+  color: #bfbfbf;
+
+  @include link;
+}

@@ -1,0 +1,9 @@
+.page-header {
+  display: flex;
+  margin: 0 20px;
+  overflow: hidden;
+
+  @media (min-width: $desktop-width) {
+    margin: 15px 25px 0;
+  }
+}
