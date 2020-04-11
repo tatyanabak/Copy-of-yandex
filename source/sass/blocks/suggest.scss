@@ -65,10 +65,8 @@
     font-size: 17px;
 
     background-color: white;
-  }
 
-  &:hover {
-    @media (min-width: $desktop-width) {
+    &:hover {
       background-color: $color-accent-soft;
     }
   }

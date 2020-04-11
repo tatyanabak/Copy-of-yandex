@@ -7,19 +7,15 @@
 
   @media (min-width: $desktop-width) {
     display: block;
-  }
 
-  &:hover,
-  &:active {
-    @media (min-width: $desktop-width) {
+    &:hover,
+    &:active {
       color: $color-link-hover;
 
       outline: none;
     }
-  }
 
-  &:focus {
-    @media (min-width: $desktop-width) {
+    &:focus {
       outline: 1px solid $color-accent;
     }
   }
